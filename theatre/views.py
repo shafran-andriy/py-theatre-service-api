@@ -24,7 +24,7 @@ from theatre.serializers import (
     PlaySerializer,
     ReservationSerializer,
     ReservationListSerializer,
-    MovieImageSerializer,
+    PlayImageSerializer,
 )
 
 
@@ -102,7 +102,7 @@ class PerformanceViewSet(
             return PerformanceDetailSerializer
 
         if self.action == "upload_image":
-            return MovieImageSerializer
+            return PlayImageSerializer
 
         return PlaySerializer
 
@@ -113,7 +113,7 @@ class PerformanceViewSet(
         permission_classes=[IsAdminUser],
     )
     def upload_image(self, request, pk=None):
-        """Endpoint for uploading image to specific movie"""
+        """Endpoint for uploading image to specific play"""
         play = self.get_object()
         serializer = self.get_serializer(play, data=request.data)
 
