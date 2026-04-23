@@ -10,7 +10,7 @@ from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
-from theatre.models import Genre, Actor, TheaterHall, Performance, Reservation
+from theatre.models import Genre, Actor, TheaterHall, Performance, Reservation, Play, Ticket
 from theatre.permissions import IsAdminOrIfAuthenticatedReadOnly
 
 from theatre.serializers import (
@@ -18,6 +18,8 @@ from theatre.serializers import (
     ActorSerializer,
     PerformanceDetailSerializer,
     PerformanceListSerializer,
+    PlayDetailSerializer,
+    PlayListSerializer,
     PlaySerializer,
     TheaterHallSerializer,
     PerformanceSerializer,
@@ -58,14 +60,14 @@ class TheaterHallViewSet(
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
 
 
-class PerformanceViewSet(
+class PlayViewSet(
     mixins.ListModelMixin,
     mixins.CreateModelMixin,
     mixins.RetrieveModelMixin,
     viewsets.GenericViewSet,
 ):
-    queryset = Performance.objects.prefetch_related("play", "theater_hall")
-    serializer_class = PerformanceSerializer
+    queryset = Play.objects.prefetch_related("play", "theater_hall")
+    serializer_class = PlaySerializer
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
 
     @staticmethod
@@ -96,10 +98,10 @@ class PerformanceViewSet(
 
     def get_serializer_class(self):
         if self.action == "list":
-            return PerformanceListSerializer
+            return PlayListSerializer
 
         if self.action == "retrieve":
-            return PerformanceDetailSerializer
+            return PlayDetailSerializer
 
         if self.action == "upload_image":
             return PlayImageSerializer
