@@ -34,6 +34,25 @@ Use the following credentials to access the system:
 - **Email:** admin@test.test  
 - **Password:** Qazwsx1!
 
+## Getting access
+
+To start using the API:
+
+- Create a user via `/api/user/register/`
+- Obtain an access token via `/api/user/token/`
+
+## Run with Docker
+
+Docker should be installed.
+
+You can also use the pre-built image from Docker Hub:  
+https://hub.docker.com/repository/docker/andriyshafran/py-theatre-service-api-theatre/general
+
+```bash
+docker-compose build
+docker-compose up
+```
+
 ## Pages images:
 
 ### Actor List
