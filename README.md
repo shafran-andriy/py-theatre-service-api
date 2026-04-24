@@ -68,4 +68,4 @@ docker-compose up
 ![Genre List](photos_of_the_api/GenreList.png)
 
 ### Theatre Hall List
-![Theatre Hall List](photos_of_the_api/TheatreHallList.png)
+![Theatre Hall List](https://raw.githubusercontent.com/shafran-andriy/py-theatre-service-api/main/photos_of_the_api/TheatreHallList.png)
