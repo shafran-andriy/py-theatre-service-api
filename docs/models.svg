@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="820" viewBox="0 0 1480 820" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#fff"/>
+  <text x="740" y="34" text-anchor="middle" font-size="24" font-weight="600">Theatre</text>
+
+  <!-- Play -->
+  <g id="Play">
+    <rect x="134" y="77" width="260" height="192" fill="#fff" stroke="#000" stroke-width="2"/>
+    <line x1="134" y1="125" x2="394" y2="125" stroke="#000" stroke-width="2"/>
+    <text x="264" y="110" text-anchor="middle" font-size="24">Play</text>
+    <text x="144" y="158" font-size="22">id: int</text>
+    <text x="144" y="206" font-size="22">title: str</text>
+    <text x="144" y="254" font-size="22">description: str (text)</text>
+  </g>
+
+  <!-- Performance -->
+  <g id="Performance">
+    <rect x="604" y="77" width="297" height="240" fill="#fff" stroke="#000" stroke-width="2"/>
+    <line x1="604" y1="125" x2="901" y2="125" stroke="#000" stroke-width="2"/>
+    <text x="752.5" y="110" text-anchor="middle" font-size="24">Performance</text>
+    <text x="614" y="158" font-size="22">id: int</text>
+    <text x="614" y="206" font-size="22">play: Play</text>
+    <text x="614" y="254" font-size="22">theatre_hall: TheatreHall</text>
+    <text x="614" y="302" font-size="22">show_time: datetime</text>
+  </g>
+
+  <!-- TheatreHall -->
+  <g id="TheatreHall">
+    <rect x="1058" y="77" width="260" height="240" fill="#fff" stroke="#000" stroke-width="2"/>
+    <line x1="1058" y1="125" x2="1318" y2="125" stroke="#000" stroke-width="2"/>
+    <text x="1188" y="110" text-anchor="middle" font-size="24">TheatreHall</text>
+    <text x="1068" y="158" font-size="22">id: int</text>
+    <text x="1068" y="206" font-size="22">name: str</text>
+    <text x="1068" y="254" font-size="22">rows: int</text>
+    <text x="1068" y="302" font-size="22">seats_in_row: int</text>
+  </g>
+
+  <!-- Actor -->
+  <g id="Actor">
+    <rect x="42" y="409" width="222" height="193" fill="#fff" stroke="#000" stroke-width="2"/>
+    <line x1="42" y1="457" x2="264" y2="457" stroke="#000" stroke-width="2"/>
+    <text x="153" y="442" text-anchor="middle" font-size="24">Actor</text>
+    <text x="52" y="490" font-size="22">id: int</text>
+    <text x="52" y="538" font-size="22">first_name: str</text>
+    <text x="52" y="586" font-size="22">last_name: str</text>
+  </g>
+
+  <!-- Genre -->
+  <g id="Genre">
+    <rect x="319" y="409" width="222" height="145" fill="#fff" stroke="#000" stroke-width="2"/>
+    <line x1="319" y1="457" x2="541" y2="457" stroke="#000" stroke-width="2"/>
+    <text x="430" y="442" text-anchor="middle" font-size="24">Genre</text>
+    <text x="329" y="490" font-size="22">id: int</text>
+    <text x="329" y="538" font-size="22">name: str</text>
+  </g>
+
+  <!-- Ticket -->
+  <g id="Ticket">
+    <rect x="585" y="502" width="333" height="289" fill="#fff" stroke="#000" stroke-width="2"/>
+    <line x1="585" y1="550" x2="918" y2="550" stroke="#000" stroke-width="2"/>
+    <text x="751.5" y="535" text-anchor="middle" font-size="24">Ticket</text>
+    <text x="595" y="583" font-size="22">id: int</text>
+    <text x="595" y="631" font-size="22">row: int</text>
+    <text x="595" y="679" font-size="22">seat: int</text>
+    <text x="595" y="727" font-size="22">performance: Performance</text>
+    <text x="595" y="775" font-size="22">reservation: Reservation</text>
+  </g>
+
+  <!-- Reservation -->
+  <g id="Reservation">
+    <rect x="1040" y="447" width="333" height="192" fill="#fff" stroke="#000" stroke-width="2"/>
+    <line x1="1040" y1="495" x2="1373" y2="495" stroke="#000" stroke-width="2"/>
+    <text x="1206.5" y="480" text-anchor="middle" font-size="24">Reservation</text>
+    <text x="1050" y="528" font-size="22">id: int</text>
+    <text x="1050" y="576" font-size="22">created_at: datetime</text>
+    <text x="1050" y="624" font-size="22">user: User (built-in Django)</text>
+  </g>
+
+  <!-- Relationships -->
+  <!-- Play composition to Performance -->
+  <path d="M394 149 L418 135 L442 149 L418 163 Z" fill="#000" stroke="#000" stroke-width="2"/>
+  <path d="M442 149 L498 149 L498 197 L604 197" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="455" y="184" font-size="22">1</text>
+  <text x="582" y="183" font-size="22">n</text>
+
+  <!-- TheatreHall composition to Performance -->
+  <path d="M1058 149 L1034 135 L1010 149 L1034 163 Z" fill="#000" stroke="#000" stroke-width="2"/>
+  <path d="M1010 149 L966 149 L966 246 L901 246" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="1034" y="121" font-size="22">1</text>
+  <text x="931" y="272" font-size="22">n</text>
+
+  <!-- Performance composition to Ticket -->
+  <path d="M752 317 L766 341 L752 365 L738 341 Z" fill="#000" stroke="#000" stroke-width="2"/>
+  <path d="M752 365 L752 502" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="774" y="344" font-size="22">1</text>
+  <text x="775" y="486" font-size="22">n</text>
+
+  <!-- Reservation composition to Ticket -->
+  <path d="M1040 519 L1016 505 L992 519 L1016 533 Z" fill="#000" stroke="#000" stroke-width="2"/>
+  <path d="M992 519 L978 519 L978 766 L918 766" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="998" y="486" font-size="22">1</text>
+  <text x="943" y="806" font-size="22">n</text>
+
+  <!-- Play to Actor many-to-many -->
+  <path d="M206 269 L206 335 L153 335 L153 409" fill="none" stroke="#000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="152" y="319" font-size="22">0..n</text>
+  <text x="170" y="398" font-size="22">0..n</text>
+
+  <!-- Play to Genre many-to-many -->
+  <path d="M291 269 L291 340 L430 340 L430 409" fill="none" stroke="#000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="298" y="319" font-size="22">0..n</text>
+  <text x="447" y="398" font-size="22">0..n</text>
+</svg>
