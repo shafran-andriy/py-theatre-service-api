@@ -18,3 +18,19 @@ An API for the theatre in your town. The idea is to allow theatregoers to book t
 - 🎟 Manage reservations and tickets
 - 🕒 Create and manage performances (show times)
 - 🔍 Filter plays and performances
+
+## Load test data
+
+Use the following command to load prepared data for testing and debugging:
+
+```bash
+python manage.py loaddata cinema_service_db_data.json
+```
+
+## Test credentials
+
+Use the following credentials to access the system:
+
+- **Email:** admin@test.test  
+- **Password:** Qazwsx1!
+
