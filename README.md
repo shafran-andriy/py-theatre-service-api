@@ -56,16 +56,16 @@ docker-compose up
 ## Pages images:
 
 ### Actor List
-![Actor List](https://github.com/shafran-andriy/py-theatre-service-api/blob/main/photos_of_the_api/ActorList.png)
+![Actor List](photos_of_the_api/ActorList.png)
 
 ### Performance List
-![Performance List](https://github.com/shafran-andriy/py-theatre-service-api/blob/main/photos_of_the_api/PerformanceList.png)
+![Performance List](photos_of_the_api/PerformanceList.png)
 
 ### Performance Instance
-![Performance Instance](https://github.com/shafran-andriy/py-theatre-service-api/blob/main/photos_of_the_api/Performance_Instance.png)
+![Performance Instance](photos_of_the_api/Performance_Instance.png)
 
 ### Genre List
-![Genre List](https://github.com/shafran-andriy/py-theatre-service-api/blob/main/photos_of_the_api/GenreList.png)
+![Genre List](photos_of_the_api/GenreList.png)
 
 ### Theatre Hall List
-![Theatre Hall List](https://github.com/shafran-andriy/py-theatre-service-api/blob/main/photos_of_the_api/TheatreHallList.png)
+![Theatre Hall List](photos_of_the_api/TheatreHallList.png)
