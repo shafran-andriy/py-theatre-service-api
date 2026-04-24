@@ -1,9 +1,13 @@
 # py-theatre-service-api
 An API for the theatre in your town. The idea is to allow theatregoers to book tickets online and choose their preferred seats without having to go to the theatre in person
 
+## DB Structure
+![DB Structure](https://github.com/shafran-andriy/py-theatre-service-api/blob/main/docs/models.svg)
+
 ## Features
 
 - 🔐 JWT authentication
+- 📧 Email authentication
 - 🛠 Admin panel available at `/admin/`
 - 📄 API documentation available at `/api/doc/swagger/`
 
