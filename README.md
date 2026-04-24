@@ -34,3 +34,14 @@ Use the following credentials to access the system:
 - **Email:** admin@test.test  
 - **Password:** Qazwsx1!
 
+## Pages images:
+
+### Actor List
+
+### Performance List
+
+### Performance Instance
+
+### Genre List
+
+### Theatre Hall List
